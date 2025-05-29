@@ -1,16 +1,16 @@
-#ifndef GAMEMANAGER_H
-#define GAMEMANAGER_H
+#ifndef GAMEMANAGER_H // ตรวจสอบว่ามีการประกาศซ้ำหรือไม่
+#define GAMEMANAGER_H // ถ้ายังไม่มี ให้ประกาศคอนดิชันนี้ไว้
 
-#include "GameBase.h"
+#include "GameBase.h" // รวมเฮดเดอร์ของ GameBase เพื่อใช้เป็นพอยน์เตอร์ในคลาส GameManager
 
-class GameManager {
-private:
-    GameBase* game;
+class GameManager { // ประกาศคลาส GameManager สำหรับควบคุมการเล่นเกม
+private: // ส่วนข้อมูลภายในที่ไม่ให้ภายนอกเข้าถึงโดยตรง
+    GameBase* game; // พอยน์เตอร์ไปยังอ็อบเจ็กต์เกมที่สืบทอดจาก GameBase
 
-public:
-    GameManager(GameBase* g);
-    void run();
-    ~GameManager();
+public: // ส่วนที่สามารถเรียกใช้งานจากภายนอกคลาสได้
+    GameManager(GameBase* g); // คอนสตรัคเตอร์ รับพอยน์เตอร์ไปยังเกม
+    void run(); // ฟังก์ชันหลักที่ใช้ควบคุมการรันของเกม
+    ~GameManager(); // ดิสทรัคเตอร์ ทำลายอ็อบเจ็กต์เกมและคืนหน่วยความจำ
 };
 
-#endif
+#endif // สิ้นสุดเงื่อนไขของ header guard
