@@ -106,8 +106,6 @@ void Game2048::spawnTile() { // ฟังก์ชันสุ่มตัวเ
 
 // Definitions for virtual functions to avoid vtable linker errors
 
-#include "Game2048.h" // รวมเฮดเดอร์ไฟล์อีกครั้ง (ป้องกัน vtable error)
-
 // Definitions for virtual functions to avoid vtable linker errors
 int Game2048::getHighScore() const {
     return 0; // คืนค่า high score (ตัวอย่าง)

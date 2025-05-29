@@ -22,4 +22,4 @@ public: // ส่วนที่สามารถเข้าถึงได้
 };
 
 
-#endif // สิ้นสุด Header Guard
+#endif
